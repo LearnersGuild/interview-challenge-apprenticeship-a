@@ -24,6 +24,7 @@ export function start() { // eslint-disable-line import/prefer-default-export
                     saveUninitialized: true,
                     cookie: { maxAge: 60000 }}))
 
+  // all routes are initialized and mounted
   app.use(routes)
 
   app.use((req, res) => {

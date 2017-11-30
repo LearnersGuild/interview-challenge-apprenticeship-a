@@ -2,10 +2,11 @@ import express from 'express'
 
 import restaurants from './restaurants'
 import authentication from './authentication'
-import { ensureLoggedIn } from '../middlewares';
+import { ensureLoggedIn } from '../middlewares'
+
 
 const routes = express.Router()
-routes.use('/', authentication);
+routes.use('/', authentication)
 
 routes.use(ensureLoggedIn)
 

@@ -57,10 +57,10 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 
 Routes:
 - [ ] __20:__ Navigating to `/restaurants/<RESTAURANT ID>/rants/new` loads the new rant page
-- [ ] __30:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant
+- [ ] __20:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant
 
 Users can:
-- [ ] __30:__ Create a new rant for an restaurant. The rant has a `title` and a `body`. Creating a new rant redirects the user back to the restaurant page (`/restaurants/<RESTAURANT ID>`)
+- [ ] __30:__ Create a new rant for an restaurant. The rant has a `title`, `body`. The rant should belong to a user and a restaurant. Creating a new rant redirects the user back to the restaurant page (`/restaurants/<RESTAURANT ID>`)
 - [ ] __20:__ See all the rants of an restaurant by navigating to the restaurant detail page `/restaurants/<RESTAURANT ID>`.
 
 Users cannot:

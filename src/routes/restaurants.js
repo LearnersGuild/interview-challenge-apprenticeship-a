@@ -3,6 +3,7 @@ import express from 'express'
 import {
   getRestaurants,
   getRestaurantById,
+  getRantsByRestaurantId
 } from '../actions'
 
 const router = express.Router()
