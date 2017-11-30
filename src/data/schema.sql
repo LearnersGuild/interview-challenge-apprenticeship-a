@@ -1,11 +1,11 @@
-DROP TABLE IF EXISTS albums;
+DROP TABLE IF EXISTS restaurants;
 
 DROP TABLE IF EXISTS users;
 
-CREATE TABLE albums (
+CREATE TABLE restaurants (
   id SERIAL,
-  title VARCHAR(255) NOT NULL,
-  artist VARCHAR(255) NOT NULL
+  name VARCHAR(255) NOT NULL,
+  cuisine VARCHAR(255) NOT NULL
 );
 
 

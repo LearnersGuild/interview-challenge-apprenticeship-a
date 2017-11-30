@@ -1,6 +1,6 @@
 import express from 'express'
 
-import albums from './albums'
+import restaurants from './restaurants'
 import authentication from './authentication'
 import { ensureLoggedIn } from '../middlewares';
 
@@ -9,8 +9,8 @@ routes.use('/', authentication);
 
 routes.use(ensureLoggedIn)
 
-routes.get('/', (req, res) => res.redirect('/albums'))
-routes.use('/albums', albums)
+routes.get('/', (req, res) => res.redirect('/restaurants'))
+routes.use('/restaurants', restaurants)
 
 
 export default routes

@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+<h1>Resto-Rant</h1>
+
+<h2>Restaurants</h2>
+
+<div class="restaurant-list">
+  <% restaurants.forEach(function(restaurant) { %>
+  <div>
+    <h5><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></h5>
+    <span><%= restaurant.cuisine %></span>
+  </div>
+  <% }) %>
+</div>
+
+<% include ../partials/footer %>

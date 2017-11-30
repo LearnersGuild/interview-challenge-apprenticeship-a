@@ -1,4 +1,6 @@
-export {default as getAlbumById} from './getAlbumById'
-export {default as getAlbums} from './getAlbums'
+export {default as getRestaurantById} from './getRestaurantById'
+export {default as getRestaurants} from './getRestaurants'
 export {default as signUp} from './signUp'
 export {default as signIn} from './signIn'
+export {default as addRant} from './addRant'
+export {default as deleteRant} from './deleteRant'

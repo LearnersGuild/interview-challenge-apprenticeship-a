@@ -1,7 +1,7 @@
 {
   "name": "Vinyl",
   "version": "1.0.0",
-  "description": "A community for record enthusiasts to review their favorite albums.",
+  "description": "A community for restaurant haters to rant about their worst experiences.",
   "engines": {
     "node": "6.12.x"
   },
@@ -9,7 +9,7 @@
     "db:create": "createdb vinyl",
     "db:drop": "dropdb vinyl",
     "db:schema": "psql -d vinyl < src/data/schema.sql",
-    "db:seed": "psql -d vinyl < src/data/albums.sql",
+    "db:seed": "psql -d vinyl < src/data/restaurants.sql",
     "start": "nodemon src/index.js --exec babel-node --presets es2015,stage-2",
     "lint": "./node_modules/.bin/eslint src",
     "test": "mocha --require babel-core/register test/**/*.test.js"
