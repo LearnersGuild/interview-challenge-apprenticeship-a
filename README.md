@@ -23,7 +23,7 @@ test/                 # test files for the source files
 
 Use the following commands to set up and seed your database:
 
-1. Create PostgreSQL database `restorant`: `$ npm run db:create`
+1. Create PostgreSQL database `resto_rant`: `$ npm run db:create`
 1. Set up database tables from `schema.sql`: `$ npm run db:schema`
 1. Load seed data from `albums.sql`: `$ npm run db:seed`
 
