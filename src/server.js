@@ -20,6 +20,8 @@ export function start() { // eslint-disable-line import/prefer-default-export
 
   app.use(session({ key: 'user_sid',
                     secret: 'keyboard cat',
+                    resave: true,
+                    saveUninitialized: true,
                     cookie: { maxAge: 60000 }}))
 
   app.use(routes)

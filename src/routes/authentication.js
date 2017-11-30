@@ -13,7 +13,6 @@ router.post('/sign-up', (req, res, next) => {
   signUp(user)
   .then( user => {
     req.session.user = user
-    console.log('req.session::', req.session);
     res.redirect('/')
   })
   .catch(next)
