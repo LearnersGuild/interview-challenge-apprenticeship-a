@@ -84,4 +84,4 @@ Users can:
 
 ## Testing
 
-- [ ] __30:__ Write a test for the `addRant` action using Mocha. This test should check that a new rant is added to the database when the action is initiated.
+- [ ] __30:__ Write a test for the `addRant` action using Mocha. This test should check that a new rant is added to the database when the action is initiated. Running `npm test` passes all tests.
