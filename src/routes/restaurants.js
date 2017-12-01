@@ -14,8 +14,8 @@ router.get('/', (req, res, next) => {
     .catch(next)
 })
 
-router.get('/:restaurantID', (req, res, next) => {
-  getRestaurantById(req.params.restaurantID)
+router.get('/:restaurantId', (req, res, next) => {
+  getRestaurantById(req.params.restaurantId)
     .then(restaurant => res.render('restaurants/restaurant', {restaurant}))
     .catch(next)
 })
