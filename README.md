@@ -64,7 +64,7 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 ## Create restaurant rants
 
 Routes:
-- [ ] __20:__ Navigating to `/restaurants/<RESTAURANT ID>/rants/new` loads the new rant page
+- [ ] __20:__ Navigating to `/restaurants/<RESTAURANT ID>/rants/new` loads the new rant page. The new rant page contains a form to create a new rant for the restaurant. No need for anything else other than a form.
 - [ ] __20:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant
 
 Users can:
