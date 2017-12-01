@@ -1,4 +1,4 @@
-# Restorant
+# RestoRant
 
 A community for restaurant haters to rant about their worst experiences.
 
