@@ -51,6 +51,14 @@ You'll be allowed to ask your interviewer clarifying questions and can use the i
 
 Each requirement is assigned a point value. A fully complete requirement will earn you full points; partially complete requirements get partial points; incomplete requirements get no points. Overall completeness is determined by dividing the total points earned by the total points available. There is a requirement of completion of 80% of the specs to secure a passing result.
 
+# Existing functionality
+
+- Navigating to `/sign-up`, loads the sign up page.
+- Navigating to `/sign-in`, loads the sign in page.
+- Navigating to `/restaurants`, loads the index page for all restaurants
+- Navigating to `/restaurants/<RESTAURANT ID>`, loads the detail page for a restaurant
+
+
 # Specs
 
 ## Create restaurant rants
@@ -72,11 +80,11 @@ Routes:
 - [ ] __30:__ Sending a DELETE request to `/restaurants/<RESTAURANT ID>/rants/<RANT ID>` deletes the rant
 
 Users can:
-- [ ] __30:__ Delete a rant by clicking on the `trash` icon for the corressponding rant.
+- [ ] __30:__ Delete a rant by clicking on the `trash` icon for the corresponding rant.
 
 ## Redirect user back to previous page
 
-Going to a new rant page(`/restaurants/<RESTAURANT ID>/rants/new`) without having signed in, redirects a user back to the `/sign-in` page. On successful sign in, the user is redirected to the restaurants page (`/restaurants`). Instead of the default behavior of redirecting to the restaurants page, the user should go back to the new rant page (since that was the original page the user wanted to visit)
+Going to a new rant page(`/restaurants/<RESTAURANT ID>/rants/new`) without having signed in, redirects a user back to the `/sign-in` page. On successful sign in, the user is redirected to the restaurants page (`/restaurants`). Instead of the default behavior of redirecting to the restaurants page, the user should go back to the new rant page (since that was the original page the user wanted to visit). Don't worry about any displaying any error messages on the front end.
 
 Users can:
 - [ ] __50:__ Successfully go back to the original URL on sign up
