@@ -19,14 +19,6 @@ src/
 test/                 # test files for the source files
 ```
 
-### Setting Up Your Database
-
-Use the following commands to set up and seed your database:
-
-1. Create PostgreSQL database `resto_rant`: `$ npm run db:create`
-1. Set up database tables from `schema.sql`: `$ npm run db:schema`
-1. Load seed data from `albums.sql`: `$ npm run db:seed`
-
 ### Setting up your config
 
 Run the command in the terminal so that the config loads correctly
@@ -36,6 +28,14 @@ Run the command in the terminal so that the config loads correctly
 
 Run the following command in the terminal:
 `$ npm install`
+
+### Setting Up Your Database
+
+Use the following commands to set up and seed your database:
+
+1. Create PostgreSQL database `resto_rant`: `$ npm run db:create`
+1. Set up database tables from `schema.sql`: `$ npm run db:schema`
+1. Load seed data from `albums.sql`: `$ npm run db:seed`
 
 ### Starting your development server
 
@@ -56,35 +56,28 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 - Navigating to `/sign-up`, loads the sign up page.
 - Navigating to `/sign-in`, loads the sign in page.
 - Navigating to `/restaurants`, loads the index page for all restaurants
-- Navigating to `/restaurants/<RESTAURANT ID>`, loads the detail page for a restaurant
-- The `user` object is available to you in the request via `request.user`
-
+- Navigating to `/restaurants/<RESTAURANT ID>`, loads the detail page for a restaurant.
+- The `user` object is available to you in the request via `request.user`.
+- In you change the `schema.sql` file, remember to reload the schema by running `npm run db:schema`.
+- `public/script.js` is the file which contains client side JavaScript.
 # Specs
 
 ## Create restaurant rants
 
 Routes:
-- [ ] __20:__ Navigating to `/restaurants/<RESTAURANT ID>/rants/new` loads the new rant page. The new rant page contains a form to create a new rant for the restaurant. No need for anything else other than a form.
-- [ ] __20:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant
+- [ ] __20:__ Navigating to `/restaurants/<RESTAURANT ID>` loads the restaurant detail page. You should modify this page to add a form to create a new `rant` for the restaurant.
+- [ ] __20:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant.
 
 Users can:
-- [ ] __30:__ Create a new rant for an restaurant. The rant has a `title`, `body`. The rant should belong to a user and a restaurant. Creating a new rant redirects the user back to the restaurant page (`/restaurants/<RESTAURANT ID>`)
-- [ ] __20:__ See all the rants of an restaurant by navigating to the restaurant detail page `/restaurants/<RESTAURANT ID>`.
-
-Users cannot:
-- [ ] __10:__ Create a rant if they are not signed in.
-
-## Delete restaurant rants
-
-Routes:
-- [ ] __30:__ Sending a DELETE request to `/restaurants/<RESTAURANT ID>/rants/<RANT ID>` deletes the rant
-
-Users can:
-- [ ] __30:__ Delete a rant by clicking on the `trash` icon for the corresponding rant.
+- [ ] __30:__ Create a new rant for an restaurant.
+  - The rant has a `title`, `body`.
+  - The rant should belong to a user and a restaurant.
+  - Creating a new rant should happen via AJAX (page should not refresh on form submission)
+  - Once the user clicks the `Create Rant` button, the newly created rant should be added to the list of rants on the restaurant detail page(`/restaurants/<RESTAURANT ID>`) via client side JavaScript.
 
 ## Redirect user back to previous page
 
-Going to a new rant page(`/restaurants/<RESTAURANT ID>/rants/new`) without having signed in, redirects a user back to the `/sign-in` page. On successful sign in, the user is redirected to the restaurants page (`/restaurants`). Instead of the default behavior of redirecting to the restaurants page, the user should go back to the new rant page (since that was the original page the user wanted to visit). Don't worry about any displaying any error messages on the front end.
+For example, going to a restaurant detail page(`/restaurants/<RESTAURANT ID>`) without having signed in, redirects a user back to the `/sign-in` page. On successful sign in, the current behaviour of the application is to redirect the user to the restaurants page (`/restaurants`). Change the behavior such that the user is redirected back to the restaurant detail page. (since that was the original page the user wanted to visit)
 
 Users can:
 - [ ] __50:__ Successfully go back to the original URL on sign up
