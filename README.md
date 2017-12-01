@@ -57,7 +57,7 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 - Navigating to `/sign-in`, loads the sign in page.
 - Navigating to `/restaurants`, loads the index page for all restaurants
 - Navigating to `/restaurants/<RESTAURANT ID>`, loads the detail page for a restaurant
-
+- The `user` object is available to you in the request via `request.user`
 
 # Specs
 
