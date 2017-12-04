@@ -29,13 +29,14 @@ Run the command in the terminal so that the config loads correctly
 Run the following command in the terminal:
 `$ npm install`
 
-### Setting Up Your Database
+### Setting Up The Remote Database
 
 Use the following commands to set up and seed your database:
 
-1. Create PostgreSQL database `resto_rant`: `$ npm run db:create`
 1. Set up database tables from `schema.sql`: `$ npm run db:schema`
 1. Load seed data from `albums.sql`: `$ npm run db:seed`
+
+Note: These commands will only work if you have your `.env` file correctly setup.
 
 ### Starting your development server
 

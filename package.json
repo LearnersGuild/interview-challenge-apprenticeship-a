@@ -8,8 +8,8 @@
   "scripts": {
     "db:create": "createdb resto_rant",
     "db:drop": "dropdb resto_rant",
-    "db:schema": "psql -d resto_rant < src/data/schema.sql",
-    "db:seed": "psql -d resto_rant < src/data/restaurants.sql",
+    "db:schema": "./bin/schema",
+    "db:seed": "./bin/seed",
     "start": "nodemon src/index.js --exec babel-node --presets es2015,stage-2",
     "lint": "./node_modules/.bin/eslint src",
     "test": "mocha --require babel-core/register test/**/*.test.js"
