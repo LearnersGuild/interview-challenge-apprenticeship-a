@@ -86,3 +86,12 @@ Users can:
 ## Testing
 
 - [ ] __30:__ Write a test for the `addRant` action using Mocha. This test should check that a new rant is added to the database when the action is initiated. Running `npm test` passes all tests.
+
+## Uninstall after the interview
+
+1. Stop any running express servers
+2. Remove Postico entry for the database (if applicable)
+3. Remove command line entry/ies for the database (delete from `~/.zsh_history` or `~/.bash_history`)
+4. cd out of the usb drive from the terminal
+5. Close the IDE / text editor window(s) with the challenge files
+6. Eject the USB drive
