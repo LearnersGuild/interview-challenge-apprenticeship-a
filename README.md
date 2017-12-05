@@ -34,7 +34,7 @@ Run the following command in the terminal:
 Use the following commands to set up and seed your database:
 
 1. Set up database tables from `schema.sql`: `$ npm run db:schema`
-1. Load seed data from `albums.sql`: `$ npm run db:seed`
+1. Load seed data from `restaurants.sql`: `$ npm run db:seed`
 
 Note: These commands will only work if you have your `.env` file correctly setup.
 
