@@ -1,8 +1,7 @@
 import express from 'express'
 
 import {
-  addRant,
-  deleteRant
+  addRant
 } from '../actions'
 
 const router = express.Router()
