@@ -4,7 +4,10 @@
 <em>cuisine: <%= restaurant.cuisine %></em>
 
 <div class="rant-list">
-  <!-- TODO: add rants for restaurants -->
+  <% rants.forEach(function(rant) { %>
+    <span><%= rant.title %></span>
+    <span><%= rant.body %></span>
+  <% }) %>
 </div>
 
 <div class="new-rant">

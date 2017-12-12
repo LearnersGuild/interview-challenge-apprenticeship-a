@@ -15,8 +15,9 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/:restaurantId', (req, res, next) => {
+  let rants = []; // TODO: fixme
   getRestaurantById(req.params.restaurantId)
-    .then(restaurant => res.render('restaurants/restaurant', {restaurant}))
+    .then(restaurant => res.render('restaurants/restaurant', {restaurant, rants}))
     .catch(next)
 })
 
