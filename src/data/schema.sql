@@ -27,5 +27,13 @@ CREATE TABLE "sessions" (
   "expire" timestamp(6) NOT NULL
 );
 
+CREATE TABLE rants (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER,
+  restaurant_id INTEGER,
+  title VARCHAR(240),
+  body TEXT
+);
+
 
 -- TODO: Add schema for rants table here

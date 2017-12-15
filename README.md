@@ -70,8 +70,8 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 - Navigating to `/restaurants`, loads the index page for all restaurants
 - Navigating to `/restaurants/<RESTAURANT ID>`, loads the detail page for a restaurant.
 - The `user` object is available to you in the request via `request.user`.
-- In you change the `schema.sql` file, remember to reload the schema by running `npm run db:schema`.
 - `public/script.js` is the file which contains client side JavaScript.
+
 # Specs
 
 ## Create restaurant rants
@@ -82,8 +82,7 @@ Routes:
 
 Users can:
 - [ ] __30:__ Create a new rant for an restaurant.
-  - The rant has a `title`, `body`.
-  - The rant should belong to a user and a restaurant.
+  - The schema for the `rants` table has already been created for you. Look at `schema.sql` for the details of the schema.
   - Creating a new rant should happen via AJAX (page should not refresh on form submission)
   - Once the user clicks the `Create Rant` button, the newly created rant should be added to the list of rants on the restaurant detail page(`/restaurants/<RESTAURANT ID>`) via client side JavaScript.
 
