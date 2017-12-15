@@ -29,11 +29,11 @@ CREATE TABLE "sessions" (
 
 CREATE TABLE rants (
   id SERIAL PRIMARY KEY,
-  user_id INTEGER,
-  restaurant_id INTEGER,
+  user_id INTEGER NOT NULL,
+  restaurant_id INTEGER NOT NULL,
   title VARCHAR(240),
   body TEXT
 );
 
 
--- TODO: Add schema for rants table here
+
