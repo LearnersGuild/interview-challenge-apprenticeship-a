@@ -6,3 +6,7 @@ VALUES
   ('Dosa', 'Indian'),
   ('Loncheria', 'Mexican')
 ;
+
+INSERT INTO
+  users (email, username, password)
+  VALUES ('a@a.com', 'a', 'a');

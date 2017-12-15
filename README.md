@@ -66,6 +66,7 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 
 - Navigating to `/sign-up`, loads the sign up page.
 - Navigating to `/sign-in`, loads the sign in page.
+- A user with username `a`, and password `a` exists in the database for easy sign in.
 - Navigating to `/restaurants`, loads the index page for all restaurants
 - Navigating to `/restaurants/<RESTAURANT ID>`, loads the detail page for a restaurant.
 - The `user` object is available to you in the request via `request.user`.

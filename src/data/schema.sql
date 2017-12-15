@@ -4,6 +4,9 @@ DROP TABLE IF EXISTS users;
 
 DROP TABLE IF EXISTS rants;
 
+DROP TABLE IF EXISTS sessions;
+
+
 CREATE TABLE restaurants (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -16,6 +19,12 @@ CREATE TABLE users (
   username VARCHAR(255) NOT NULL UNIQUE,
   email VARCHAR(255) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE "sessions" (
+  "sid" varchar NOT NULL PRIMARY KEY,
+  "sess" json NOT NULL,
+  "expire" timestamp(6) NOT NULL
 );
 
 
