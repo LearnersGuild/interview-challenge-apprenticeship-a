@@ -82,7 +82,7 @@ Routes:
 
 Users can:
 - [ ] __30:__ Create a new rant for an restaurant.
-  - The schema for the `rants` table has already been created for you. Look at `schema.sql` for the details of the schema.
+  - The schema for the `rants` table has already been created for you. Look at `src/data/schema.sql` for the details of the schema.
   - Creating a new rant should happen via AJAX (page should not refresh on form submission)
   - Once the user clicks the `Create Rant` button, the newly created rant should be added to the list of rants on the restaurant detail page(`/restaurants/<RESTAURANT ID>`) via client side JavaScript.
 

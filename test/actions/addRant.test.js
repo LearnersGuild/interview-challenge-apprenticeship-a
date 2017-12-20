@@ -1,8 +1,6 @@
-import dotenv from 'dotenv';
-import { expect } from 'chai';
-import { addRant } from '../../src/actions';
-
-dotenv.config();
+import env from '../env'
+import { expect } from 'chai'
+import { addRant } from '../../src/actions'
 
 describe('function addRant ', () => {
   it('should create a new row in the rants table', () => {
