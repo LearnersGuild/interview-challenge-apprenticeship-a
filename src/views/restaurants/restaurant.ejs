@@ -10,8 +10,12 @@
   <% }) %>
 </div>
 
-<div class="new-rant">
-  <!-- TODO: add rants for restaurants -->
+<div class="new-rant" method="POST">
+  <form name="new-rant-form">
+    <input type="text" name="rant-title" id="rant-title" placeholder="Title">
+    <textarea id="rant" name="rant" placeholder="Write your rant..."> </textarea>
+    <button id='rant-submit' type="submit"> RANT! </button>
+  </form>
 </div>
 
 <% include ../partials/footer %>

@@ -30,7 +30,13 @@ router.post('/sign-in', (req, res, next) => {
       res.redirect('/sign-in')
     } else {
       req.session.user = user
-      res.redirect('/restaurants');
+      console.log(req.session.redir)
+      if (req.session.redir){
+        res.redirect(req.session.redir)
+      }else{
+        res.redirect('/restaurants');
+      }
+
     }
   })
   .catch(next);
