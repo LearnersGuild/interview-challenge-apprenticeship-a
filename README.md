@@ -4,7 +4,7 @@ A community for restaurant haters to rant about their worst experiences.
 
 Part of the application has already been built for you. Your job is to take it to completion.
 
-To view this README with formatting press `ctrl+shift+M` in Atom or `shift+cmd+V` in VSCode.
+To view this README using markdown preview press `ctrl+shift+M` in Atom or `shift+cmd+V` in VSCode.
 
 ## Getting Started
 
