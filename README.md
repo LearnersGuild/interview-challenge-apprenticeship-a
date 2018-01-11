@@ -51,13 +51,14 @@ During the interview you will have 75 minutes to complete all the specs of the c
 
 You'll be allowed to ask your interviewer clarifying questions and can use the internet to search for information as needed. No other aid is allowed. If you have a question about whether or not a particular form of aid is acceptable, ask your interviewer.
 
-Each requirement is assigned a point value. A fully complete requirement will earn you full points; partially complete requirements get partial points; incomplete requirements get no points. Overall completeness is determined by dividing the total points earned by the total points available. There is a requirement of completion of 80% of the specs to secure a passing result.
+Each requirement is assigned a point value. A fully complete requirement will earn you full points; partially complete requirements get partial points; incomplete requirements get no points. Overall completeness is determined by dividing the total points earned by the total points available. To pass the interview you must score 80% or higher.
 
 ## Existing functionality
 
 The app uses a simple file structure for an Express web app server that renders views using EJS templates.
 
 ```sh
+bin/                  # utility scripts
 public/               # static assets
 src/
   actions/            # async server actions (e.g. data CRUD)
@@ -73,7 +74,7 @@ test/                 # test files for the source files
 - A user with username `a`, and password `a` exists in the database for easy sign in.
 - Navigating to `/restaurants`, loads the index page for all restaurants
 - Navigating to `/restaurants/<RESTAURANT ID>`, loads the detail page for a restaurant.
-- The `user` object is available to you in the request via `request.user`.
+- The `user` object is available to you in the request via `req.user`.
 - `public/script.js` is the file which contains client side JavaScript.
 
 ## Specs
