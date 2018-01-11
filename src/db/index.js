@@ -7,6 +7,6 @@ const db = connect({host: process.env.DB_HOST,
                     database: process.env.DB_NAME,
                     user: process.env.DB_USER,
                     password: process.env.DB_PASSWORD,
-                    ssl: true})
+                    ssl: (process.env.DB_SSL.toLowerCase() === 'true')})
 
 export default db

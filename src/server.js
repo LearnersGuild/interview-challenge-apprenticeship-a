@@ -16,7 +16,7 @@ var pgPool = new pg.Pool({host: process.env.DB_HOST,
                           database: process.env.DB_NAME,
                           user: process.env.DB_USER,
                           password: process.env.DB_PASSWORD,
-                          ssl: true});
+                          ssl: (process.env.DB_SSL.toLowerCase() === 'true')});
 
 export function start() { // eslint-disable-line import/prefer-default-export
   const PORT = process.env.PORT || 3000
@@ -38,6 +38,7 @@ export function start() { // eslint-disable-line import/prefer-default-export
     }),
     secret: process.env.COOKIE_SECRET,
     resave: false,
+    saveUninitialized: false,
     cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
   }));
 
