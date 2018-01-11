@@ -6,12 +6,13 @@
     "node": "6.12.x"
   },
   "scripts": {
-    "db:create": "createdb resto_rant",
-    "db:drop": "dropdb resto_rant",
+    "db:drop": "./bin/dropDatabase",
+    "db:create": "./bin/createDatabase",
     "db:schema": "./bin/schema",
     "db:seed": "./bin/seed",
+    "db:init": "npm run db:drop && npm run db:create && npm run db:schema && npm run db:seed",
     "start": "nodemon src/index.js --exec babel-node --presets es2015,stage-2",
-    "lint": "./node_modules/.bin/eslint src",
+    "lint": "eslint src",
     "test": "mocha --require babel-core/register test/**/*.test.js"
   },
   "license": "MIT",

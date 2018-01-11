@@ -1,6 +1,10 @@
-import env from '../env'
-import { expect } from 'chai'
-import { addRant } from '../../src/actions'
+/* eslint-env node, mocha */
+/* eslint-disable import/first */
+
+require('dotenv').config()
+
+import {expect} from 'chai'
+import {addRant} from '../../src/actions'
 
 describe('function addRant ', () => {
   it('should create a new row in the rants table', () => {
