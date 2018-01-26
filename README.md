@@ -100,8 +100,8 @@ Navigating to `/restaurants/<RESTAURANT ID>` loads the restaurant detail page. Y
 
 For example, going to a restaurant detail page(`/restaurants/<RESTAURANT ID>`) without having signed in, redirects a user back to the `/sign-in` page. On successful sign in, the current behaviour of the application is to redirect the user to the restaurants page (`/restaurants`). Change the behavior such that the user is redirected back to the restaurant detail page. (since that was the original page the user wanted to visit)
 
-- [ ] __15:__ When the user attempts to access a page that requires sign-in and is not signed in, the system captures the URL they were attempting to access and redirects to `/sign-in`.
-- [ ] __25:__ On successful sign-in the user is redirected to the URL they were attempting to access.
+- [ ] __10:__ When the user attempts to access a page that requires sign-in and is not signed in, the system captures the URL they were attempting to access and redirects to `/sign-in`.
+- [ ] __30:__ On successful sign-in the user is redirected to the URL they were attempting to access.
 - [ ] __10:__ If the user navigated directly to `/sign-in`, they are redirected to the restaurants page (`/restaurants`).
 
 # Uninstall after the interview
