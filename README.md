@@ -51,7 +51,7 @@ During the interview you will have 75 minutes to complete all the specs of the c
 
 You'll be allowed to ask your interviewer clarifying questions and can use the internet to search for information as needed. No other aid is allowed. If you have a question about whether or not a particular form of aid is acceptable, ask your interviewer.
 
-Each requirement is assigned a point value. A fully complete requirement will earn you full points; partially complete requirements get partial points; incomplete requirements get no points. Overall completeness is determined by dividing the total points earned by the total points available. To pass the interview you must score 80% or higher.
+Each requirement is assigned a point value. Completing the requirement will earn you full points. _No partial points will be given._ Overall completeness is determined by dividing the total points earned by the total points available. To pass the interview you must score 80% or higher.
 
 ## Existing functionality
 
@@ -79,28 +79,30 @@ test/                 # test files for the source files
 
 ## Specs
 
-### Create restaurant rants
+### Users can add their rants
 
-Routes:
-- [ ] __20:__ Navigating to `/restaurants/<RESTAURANT ID>` loads the restaurant detail page. You should modify this page to add a form to create a new `rant` for the restaurant.
-- [ ] __20:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant.
+Navigating to `/restaurants/<RESTAURANT ID>` loads the restaurant detail page. You should modify this page to add a form to create a new `rant` for the restaurant.
 
-Users can:
-- [ ] __30:__ Create a new rant for an restaurant.
-  - The schema for the `rants` table has already been created for you. Look at `src/data/schema.sql` for the details of the schema.
-  - Creating a new rant should happen via AJAX (page should not refresh on form submission)
-  - Once the user clicks the `Create Rant` button, the newly created rant should be added to the list of rants on the restaurant detail page(`/restaurants/<RESTAURANT ID>`) via client side JavaScript.
+- [ ] __10:__ Restaurant detail pages have a form with a button `Create Rant` and two inputs: title and body.
+- [ ] __15:__ Clicking `Create Rant` sends an HTTP request to the server without a page refresh
+- [ ] __15:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant in the database.
+- [ ] __15:__ When the user clicks submit, the rant is added to the page.
+- [ ] __10:__ If the HTTP request or database insert fails, the rant is not added to the page.
+- [ ] __10:__ A user cannot add rants for any other users, including by editing client-side HTML or JavaScript.
 
-### Redirect user back to previous page
+### Database function is tested
+
+- [ ] __10:__ Test passes when a rant is added to the database
+- [ ] __10:__ Test fails if rant is not added to the database
+- [ ] __10:__ Test can be run multiple times in a row without yielding false positives or negatives.
+
+### Users are redirected back to previous page upon sign-in
 
 For example, going to a restaurant detail page(`/restaurants/<RESTAURANT ID>`) without having signed in, redirects a user back to the `/sign-in` page. On successful sign in, the current behaviour of the application is to redirect the user to the restaurants page (`/restaurants`). Change the behavior such that the user is redirected back to the restaurant detail page. (since that was the original page the user wanted to visit)
 
-Users can:
-- [ ] __50:__ Successfully go back to the original URL on sign up
-
-### Testing
-
-- [ ] __30:__ Write a test for the `addRant` action using Mocha. This test should check that a new rant is added to the database when the action is initiated. Running `npm test` passes all tests.
+- [ ] __15:__ When the user attempts to access a page that requires sign-in and is not signed in, the system captures the URL they were attempting to access and redirects to `/sign-in`.
+- [ ] __25:__ On successful sign-in the user is redirected to the URL they were attempting to access.
+- [ ] __10:__ If the user navigated directly to `/sign-in`, they are redirected to the restaurants page (`/restaurants`).
 
 # Uninstall after the interview
 
