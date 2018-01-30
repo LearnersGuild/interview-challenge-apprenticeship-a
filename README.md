@@ -84,25 +84,26 @@ test/                 # test files for the source files
 Navigating to `/restaurants/<RESTAURANT ID>` loads the restaurant detail page. You should modify this page to add a form to create a new `rant` for the restaurant.
 
 - [ ] __10:__ Restaurant detail pages have a form with a button `Create Rant` and two inputs: title and body.
-- [ ] __15:__ Clicking `Create Rant` sends an HTTP request to the server without a page refresh
-- [ ] __15:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant in the database.
-- [ ] __15:__ When the user clicks submit, the rant is added to the page.
-- [ ] __10:__ If the HTTP request or database insert fails, the rant is not added to the page.
-- [ ] __10:__ A user cannot add rants for any other users, including by editing client-side HTML or JavaScript.
+- [ ] __20:__ Clicking `Create Rant` sends an HTTP POST request to the server without a page refresh
+- [ ] __20:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant in the database.
+- [ ] __20:__ When the user clicks submit, the title and body for the new rant are added to the page.
+- [ ] __10:__ If the HTTP request fails, the title and body for the new rant are not added to the page and the user is shown the message `Server Error`.
+- [ ] __10:__ If the database insert fails, the title and body for the new rant are not added to the page and the user is shown the message `Server Error`.
+- [ ] __10:__ A user cannot add rants for any other users, including by editing client-side HTML or JavaScript. If the user attempts to, they are presented
 
 ### Database function is tested
 
-- [ ] __10:__ Test passes when a rant is added to the database
-- [ ] __10:__ Test fails if rant is not added to the database
-- [ ] __10:__ Test can be run multiple times in a row without yielding false positives or negatives.
+- [ ] __15:__ Test passes when a rant is added to the database
+- [ ] __15:__ Test fails if rant is not added to the database
+- [ ] __15:__ Test can be run multiple times in a row without yielding false positives or negatives.
 
 ### Users are redirected back to previous page upon sign-in
 
 For example, going to a restaurant detail page(`/restaurants/<RESTAURANT ID>`) without having signed in, redirects a user back to the `/sign-in` page. On successful sign in, the current behaviour of the application is to redirect the user to the restaurants page (`/restaurants`). Change the behavior such that the user is redirected back to the restaurant detail page. (since that was the original page the user wanted to visit)
 
-- [ ] __10:__ When the user attempts to access a page that requires sign-in and is not signed in, the system captures the URL they were attempting to access and redirects to `/sign-in`.
+- [ ] __20:__ When an unauthenticated user attempts to access a page that requires sign-in, the system captures the URL they were attempting to access before redirecting to the sign-in page.
 - [ ] __30:__ On successful sign-in the user is redirected to the URL they were attempting to access.
-- [ ] __10:__ If the user navigated directly to `/sign-in`, they are redirected to the restaurants page (`/restaurants`).
+- [ ] __15:__ If the user navigated directly to `/sign-in`, they are redirected to the restaurants page (`/restaurants`) after successful sign-in.
 
 # Uninstall after the interview
 
