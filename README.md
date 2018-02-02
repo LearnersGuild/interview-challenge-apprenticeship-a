@@ -47,7 +47,7 @@ If you would like to use [Postico](https://eggerapps.at/postico) to access the d
 
 # Coding Challenge
 
-During the interview you will have 75 minutes to complete all the specs of the challenge.
+During the interview you will have 100 minutes to complete all the specs of the challenge.
 
 You'll be allowed to ask your interviewer clarifying questions and can use the internet to search for information as needed. No other aid is allowed. If you have a question about whether or not a particular form of aid is acceptable, ask your interviewer.
 
@@ -83,18 +83,29 @@ test/                 # test files for the source files
 
 Navigating to `/restaurants/<RESTAURANT ID>` loads the restaurant detail page. You should modify this page to add a form to create a new `rant` for the restaurant.
 
-- [ ] __10:__ Restaurant detail pages have a form with a button `Create Rant` and two inputs: title and body.
-- [ ] __20:__ Clicking `Create Rant` sends an HTTP POST request to the server without a page refresh
+The schema for the `rants` table has already been created for you. Look at `src/data/schema.sql` for the details of the schema.
+
+Creating a new rant should happen via AJAX (page should not refresh on form submission)
+
+Once the user clicks the `Create Rant` button, the newly created rant should be added to the list of rants on the restaurant detail page(`/restaurants/<RESTAURANT ID>`) via client side JavaScript.
+
+
+- [ ] __10:__ Restaurant detail pages have a form with a button `Create Rant` and two inputs: `title` and `body`.
+- [ ] __20:__ Clicking `Create Rant` sends an HTTP POST request to the server without a page refresh.
 - [ ] __20:__ Sending a POST request to `/restaurants/<RESTAURANT ID>/rants` creates a new rant for the restaurant in the database.
-- [ ] __20:__ When the user clicks submit, the title and body for the new rant are added to the page.
+- [ ] __20:__ When the user clicks `Create Rant`, the title and body for the new rant are added to the page without a page refresh.
+
+
 - [ ] __10:__ If the HTTP request fails, the title and body for the new rant are not added to the page and the user is shown the message `Server Error`.
 - [ ] __10:__ If the database insert fails, the title and body for the new rant are not added to the page and the user is shown the message `Server Error`.
-- [ ] __10:__ A user cannot add rants for any other users, including by editing client-side HTML or JavaScript. If the user attempts to, they are presented
+- [ ] __10:__ A user cannot add rants for any other users, including by editing client-side HTML or JavaScript.
 
 ### Database function is tested
 
-- [ ] __15:__ Test passes when a rant is added to the database
-- [ ] __15:__ Test fails if rant is not added to the database
+Write a test for the `addRant` action using Mocha. This test should check that a new rant is added to the database when the action is initiated.
+
+- [ ] __15:__ Running `npm test` shows a passing test when a rant is added to the database
+- [ ] __15:__ Running `npm test` shows a failing test if rant is not added to the database
 - [ ] __15:__ Test can be run multiple times in a row without yielding false positives or negatives.
 
 ### Users are redirected back to previous page upon sign-in
