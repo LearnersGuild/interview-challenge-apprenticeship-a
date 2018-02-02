@@ -96,13 +96,15 @@ Once the user clicks the `Create Rant` button, the newly created rant should be 
 - [ ] __20:__ When the user clicks `Create Rant`, the title and body for the new rant are added to the page without a page refresh.
 
 
-- [ ] __10:__ If the HTTP request fails, the title and body for the new rant are not added to the page and the user is shown the message `Server Error`.
-- [ ] __10:__ If the database insert fails, the title and body for the new rant are not added to the page and the user is shown the message `Server Error`.
-- [ ] __10:__ A user cannot add rants for any other users, including by editing client-side HTML or JavaScript.
+- [ ] __10:__ If the HTTP request fails, the title and body for the new rant are not added to the page and the user is shown the message `Server Error` somewhere on the page without a page refresh.
+- [ ] __10:__ The system only allows adding rants for the currently authenticated user, regardless of any manipulation of client-side HTML or JavaScript.
+
 
 ### Database function is tested
 
 Write a test for the `addRant` action using Mocha. This test should check that a new rant is added to the database when the action is initiated.
+
+A test file has been provided for you in `test/actions/addRant.test.js`, which will run with the command `npm test`.
 
 - [ ] __15:__ Running `npm test` shows a passing test when a rant is added to the database
 - [ ] __15:__ Running `npm test` shows a failing test if rant is not added to the database
@@ -120,7 +122,13 @@ For example, going to a restaurant detail page(`/restaurants/<RESTAURANT ID>`) w
 
 _Please complete the following steps to close the interview and remove the interview challenge from your computer._
 
-1. Make a commit in the local git repository: `$ git add -Av` and then `$ git commit -m "Completed interview challenge"`
+1. Create a new branch with your name and the date (e.g. `justinhaaheim-2018-02-02`). Make a commit in that branch:
+```sh
+$ git checkout -b yourname-YYYY-MM-DD
+$ git add -Av
+$ git commit -m "Completed interview challenge"
+```
+
 2. Remove the interview database: `$ npm run db:drop`
 3. Stop any running express servers
 4. Remove Postico entry for the database (if applicable). Press `cmd+N` to open the favorites window and then select `edit > options > delete` to remove the entry.
